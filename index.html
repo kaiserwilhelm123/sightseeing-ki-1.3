@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Sightseeing KI</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://maps.googleapis.com/maps/api/js?key=DEIN_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+
+<div class="container">
+<h1>🌍 Sightseeing KI</h1>
+
+<label>Stadt</label>
+<input type="text" id="city" placeholder="z.B. Barcelona">
+
+<label>Interessen (museum, kirche, denkmal, park)</label>
+<input type="text" id="interests" placeholder="z.B. museum, kirche">
+
+<label>Verfügbare Zeit (Stunden)</label>
+<input type="number" id="time" placeholder="z.B. 3">
+
+<button onclick="getRecommendations()">Empfehlungen berechnen</button>
+
+<h2>Empfohlene Sehenswürdigkeiten</h2>
+<div id="results"></div>
+
+<div id="map" style="width:100%;height:400px;margin-top:20px;"></div>
+</div>
+
+<script src="map.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
